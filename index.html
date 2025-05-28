@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some thing went wrong!!!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="error-container">
+        <p class="sad-face-char">:(</p>
+        <p class="content-error">
+          Your PC ran into a problem and needs to restart. We're <br />
+          just collecting some error info, and then we'll restart for <br />
+          you.
+        </p>
+        <p class="content-error percent-auto-fix" id="percent-container">
+          <span id="percent"></span>% complete
+        </p>
+
+        <div class="footer">
+          <div class="qr-image">
+            <img src="qr.PNG" alt="QR Code" />
+          </div>
+          <div class="footer-text">
+            <p>
+              For more information about this issue and possible fixes, visit
+              https://www.windows.com/stopcode
+            </p>
+
+            <p class="mt-10 mb-10">
+              If you call a support person, give them this info:
+            </p>
+
+            <p class="stop-code">Stop code: EKAF_BSOD_LMTH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let percent = 0;
+      const percentElement = document.getElementById("percent");
+      // Set default value
+      percentElement.innerText = percent;
+
+      const rangeRandomSecondToReUpdatePercent = [5, 15];
+
+      function updatePercent() {
+        if (percent >= 100) {
+          percent = 0;
+        }
+
+        const increment = Math.floor(Math.random() * 10) + 1;
+        percent = Math.min(percent + increment, 100);
+        percentElement.textContent = percent;
+
+        const delay =
+          Math.floor(
+            Math.random() *
+              (rangeRandomSecondToReUpdatePercent[0] -
+                rangeRandomSecondToReUpdatePercent[1] +
+                1)
+          ) + 5000;
+        setTimeout(updatePercent, delay);
+      }
+
+      updatePercent();
+    </script>
+  </body>
+</html>

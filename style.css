@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common CSS */
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0078d7;
+  color: white;
+}
+
+.error-container {
+  padding-top: 5%;
+  padding-left: 10%;
+  max-width: 800px;
+}
+
+.percent-auto-fix {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.content-error {
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.sad-face-char {
+  font-size: 190px;
+}
+
+.stop-code {
+  margin-top: 5px;
+  color: #cccccc;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.qr-image {
+  display: flex;
+}
+
+.qr-image img {
+  width: 120px;
+  height: auto;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
